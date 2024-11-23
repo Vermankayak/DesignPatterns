@@ -34,7 +34,18 @@ import com.niharku.designPatterns.Structural.Facade.HelperFacade;
 import com.niharku.designPatterns.Structural.Proxy.CommandExecutorProxy;
 import com.niharku.designPatterns.Behavioral.Mediator.*;
 import com.niharku.designPatterns.Behavioral.ChainOfResponsibility.*;
-
+import com.niharku.designPatterns.Behavioral.Interpreter.*;
+import com.niharku.designPatterns.Behavioral.Iterator.*;
+import com.niharku.designPatterns.Behavioral.Memento.*;
+import com.niharku.designPatterns.Behavioral.Observer.*;
+import com.niharku.designPatterns.Behavioral.State.TVONState;
+import com.niharku.designPatterns.Behavioral.Strategy.CardStrategy;
+//import com.niharku.designPatterns.Behavioral.Strategy.Cart;
+//import com.niharku.designPatterns.Behavioral.Strategy.Item;
+//import com.niharku.designPatterns.Behavioral.Strategy.PaypalStrategy;
+//import com.niharku.designPatterns.Behavioral.Command.*;
+//import com.niharku.designPatterns.Behavioral.State.*;
+import com.niharku.designPatterns.Behavioral.Visitor.*;
 //import com.niharku.designPatterns.Factory.Computer;
 //import com.niharku.designPatterns.Factory.ComputerFactory;
 
@@ -214,15 +225,160 @@ public class Main {
     	
     	// <================================== Chain Of Responsibility ==============================================>
     	
-    		IWithDrawChain c1 = new WithDraw50();
-    		IWithDrawChain c2 = new WithDraw20();
-    		IWithDrawChain c3 = new WithDraw10();
-    		
-    		c1.setNextChain(c2);
-    		c2.setNextChain(c3);
-    		
-    		c1.withDrawAmount(120);
+//    		IWithDrawChain c1 = new WithDraw50();
+//    		IWithDrawChain c2 = new WithDraw20();
+//    		IWithDrawChain c3 = new WithDraw10();
+//    		
+//    		c1.setNextChain(c2);
+//    		c2.setNextChain(c3);
+//    		
+//    		c1.withDrawAmount(120);
     	// <========================================================================================>
+    	
+    	// <================================== Observer ==============================================>
+    		
+//    		MyTopic topic	 = new MyTopic("QueueA");
+//    		
+//    		Observer cons1 = new MySubscribers("consumer1");
+//    		Observer cons2 = new MySubscribers("consumer2");
+//    		Observer cons3 = new MySubscribers("consumer3");
+//    		
+//    		topic.register(cons1);
+//    		topic.register(cons2);
+//    		topic.register(cons3);
+//    		
+//    		cons1.setSubject(topic);
+//    		cons2.setSubject(topic);
+//    		cons3.setSubject(topic);
+//    		
+//    		cons1.update();
+//    		
+//    		topic.postMessage("New message Received, Nihar is really great!!");
+    		
+    		
+    		
+    	
+    	// <========================================================================================>
+    	
+    	
+    	// <================================== Strategy ==============================================>
+    	
+//    		Cart cart = new Cart();
+//    	
+//    		Item item1 = new Item("123", 230);
+//    		Item item2 = new Item("321", 450);
+//    		Item item3 = new Item("322", 300);
+//    		
+//	    	cart.addItem(item1);
+//	    	cart.addItem(item2);
+//	    	cart.addItem(item3);
+//	    	
+//	    	cart.pay(new CardStrategy("nihar", "1234567890123456", "10/10/2027", "767"));
+//	    	cart.pay(new PaypalStrategy("niharku@gmail.com", "nihar@123"));
+    		
+    		
+    	// <========================================================================================>
+    	
+    	// <================================== Command ==============================================>
+    			
+//    		FileSystemReceiver fs = FileSystemRecevierUtil.getFileSystemReceiver();
+//    		ICommand command = new OpenFileCommand(fs);
+//    		Invoker invoker = new Invoker(command);
+//    		command.execute();
+//    		
+//    		FileSystemReceiver fs1 = FileSystemRecevierUtil.getFileSystemReceiver();
+//    		ICommand command1 = new WriteFileCommand(fs1);
+//    		Invoker invoker1 = new Invoker(command1);
+//    		command1.execute();
+    	
+    	// <========================================================================================>
+    	
+    	// <================================== State ==============================================>
+    		
+//    			State st = new TVONState();
+//    			new Context(st).doAction();
+//    			
+//    			State st1 = new TVOFFState();
+//    			new Context(st1).doAction();
+//    			
+    	
+    	// <========================================================================================>
+    	
+    	// <================================== Visitor ==============================================>
+    	
+//    		Item[] items = {
+//    				
+//    				new BookItem("abc", 230),
+//    				new BookItem("led", 350),
+//    				new FruitItem("orange", 120),
+//    				
+//    		};
+    		
+    		
+//	    	Item i1 = new BookItem("abc", 230);
+//	    	Item i2 =  new BookItem("led", 350);
+//	    	Item i3 = new FruitItem("orange", 120);
+//	    	
+//	    	Visitor visitor = new Visitor();
+//	    	
+//	    	i1.accept(visitor);
+//	    	i2.accept(visitor);
+//	    	i3.accept(visitor);
+//    		System.out.println(visitor.calculateTotalPrice());
+    	
+    	// <========================================================================================>
+    	
+    	// <================================== Interpreter ==============================================>
+    	
+//    		Expression e = new BinaryExpression();
+//    		IInterpreter context = new InterpreterContext();
+//    		e.interpret(context , 12);
+    	// <========================================================================================>
+    	
+    	// <================================== Iterator ==============================================>
+    	
+//    			IStudentCollection students = new StudentCollectionImpl();
+//    			
+//    			students.add(new Student("a",1));
+//    			students.add(new Student("b", 2));
+//    			students.add(new Student("c", 3));
+//    			students.add(new Student("d", 4));
+//    			students.add(new Student("e", 5));
+//    			students.add(new Student("f", 6));
+//    			students.add(new Student("g", 7));
+//    			students.add(new Student("h", 8));
+//    			
+//    			StudentIterator st = students.iterator();
+//    			
+//    			while(st.hasNext()) {
+//    				Student s = st.next();
+//    				System.out.println(s.getName() + " <=========> " +s.getAge());
+//    			}
+//    			
+    	
+    	// <========================================================================================>
+    	
+    	// <================================== Memento ==============================================>
+    		CareTaker ct = new CareTaker();
+    		FileWriterUtil fwu = new FileWriterUtil("file1.txt");
+    		fwu.write("My name is Nihar\n");
+    		
+    		ct.save(fwu);
+    		
+    		
+    		
+    		fwu.write("My name is Ganesh\n");
+    		
+    		//ct.save(fwu);
+    		
+    		System.out.println(fwu);
+    		
+    		ct.undo(fwu);
+    		System.out.println(fwu);
+    	
+    	// <========================================================================================>
+    	
+    	
     }
 
     
